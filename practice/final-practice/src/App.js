@@ -1,25 +1,7 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './App.css';
 
-class App extends Component {
-
-  componentDidMount() {
-    fetch('/api/artists', {
-      headers: { "Content-Type": "application/json" },
-      method: 'POST',
-      body: JSON.stringify({pagination: 2})
-    })
-        .then(res => res.json())
-        .then(res => {
-          console.log(res)
-        })
-
-  fetch('/api/artists/1',)
-      .then(res => res.json())
-      .then(res => {
-        console.log(res)
-      })
-  }
+class App extends React.Component {
   render () {
     return (
       <div className="App">
@@ -29,4 +11,4 @@ class App extends Component {
   }
 }
 
-export default App
+export default App;
